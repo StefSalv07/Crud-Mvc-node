@@ -1,0 +1,81 @@
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<link rel="stylesheet" href="/css/style.css">
+<!-- Navbar Animation Script -->
+
+<%- include('partials/nav') %>
+    <main class="container py-5">
+        <!-- Your main content here -->
+
+        <div class="add-users-page">
+            <div class="container">
+                <div class="form-container fade-in">
+                    <!-- Page Title -->
+                    <h3 class="page-title">Welcome Admin! </h3>
+                    <p class="subtitle">Add User</p>
+
+                    <!-- Form -->
+                    <form action="/saveuser" method="POST"
+                        enctype="application/x-www-form-urlencoded && multipart/form-data" class="was-validated">
+                        <!-- Name Input -->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter full name">
+                            <div class="invalid-feedback">Please provide a valid name.</div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="Enter email address">
+                            <div class="invalid-feedback">Please provide a valid email.</div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Enter password">
+                            <div class="invalid-feedback">Please provide a valid password.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" class="form-control"
+                                placeholder="Enter phone number">
+                            <!-- <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div> -->
+                        </div>
+                        <!-- File Input -->
+                        <!-- <div class="file-input-container">
+                            <label for="profilePicture" class="file-input-label">
+                                <span>Upload Profile Picture</span>
+                            </label>
+                            <input type="file" id="profilePicture" name="profilePicture" class="file-input"
+                                accept="image/*">
+                        </div> -->
+                        <!-- File Input -->
+
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-button">Add User</button>
+                    </form>
+
+                    <!-- Privacy Text -->
+                    <p class="privacy-text">
+                        By adding a user, you agree to our <a href="/terms">Terms of Service</a> and <a
+                            href="/privacy">Privacy
+                            Policy</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->

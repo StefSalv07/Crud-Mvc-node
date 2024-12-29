@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+       
+
+    </title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.rtl.min.css"
+        integrity="sha512-VNBisELNHh6+nfDjsFXDA6WgXEZm8cfTEcMtfOZdx0XTRoRbr/6Eqb2BjqxF4sNFzdvGIt+WqxKgn0DSfh2kcA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <H1>Home Page</H1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <h2>
+        
+    </h2>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMS</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('partials/nav') %>
+        <%- include('partials/header') %>
+
+            <!-- main started -->
+            <main class="container py-5">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>E-Mail</th>
+                                        <th>Phone</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <!-- <tbody>
+                               #    
+                                        <tr>
+                                            <td>
+                                             
+                                            </td>
+                                            <td>
+                                               
+                                            </td>
+                                            <td>
+                                             
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                               
+                                            </td>
+                                        </tr>
+                                       
+                                </tbody> -->
+                                <tbody>
+                                    <td>1</td>
+                                    <td><img src="https://via.placeholder.com/150" alt="User Image" class="user-image">
+                                    </td>
+                                    <td>John Doe</td>
+                                    <td>
+                                        john.doe@example.com
+                                    </td>
+                                    <td>1234567890</td>
+
+                                    <td>
+                                        <a href="/edit-user/1" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="/delete-user/1" class="btn btn-danger btn-sm">Delete</a>
+                                    </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <!-- main ended -->
+            <%- include('partials/footer') %>
+
+                <!-- Bootstrap 5 JS Bundle -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Navbar Animation Script -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const navbar = document.querySelector('.navbar');
+
+                        window.addEventListener('scroll', function () {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add('scrolled');
+                            } else {
+                                navbar.classList.remove('scrolled');
+                            }
+                        });
+                    });
+                </script>
+</body>
+
+</html>

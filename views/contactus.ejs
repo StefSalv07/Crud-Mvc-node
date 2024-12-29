@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Your Brand</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('partials/nav') %>
+
+        <main class="contact-page">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="text-center section-title mb-5">Get in Touch</h1>
+
+                        <!-- Contact Form -->
+                        <div class="contact-form-container">
+                            <form id="contactForm" class="contact-form">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name*" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email*" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <select class="form-select" required>
+                                                <option value="">Project start date</option>
+                                                <option>Start in a month</option>
+                                                <option>Start in 2-3 months</option>
+                                                <option>Start in 4-6 months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <select class="form-select" required>
+                                                <option value="">Budget range (USD)</option>
+                                                <option>20K - 50K</option>
+                                                <option>50K - 100K</option>
+                                                <option>100K+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Project details*"
+                                                maxlength="1000" required></textarea>
+                                            <div class="character-count">0/1000</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary submit-btn">Send Inquiry</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="privacy-text">
+                                            This site is protected by reCAPTCHA and the Google
+                                            <a href="#">Privacy Policy</a> and
+                                            <a href="#">Terms of Service</a> apply.
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="connect-section mt-5">
+                            <h2 class="text-center mb-4">Let's connect</h2>
+                            <div class="row g-4">
+
+                                <!-- <div class="col-md-4">
+                                    <div class="contact-info">
+                                        <h3>Partnerships</h3>
+                                        <a href="mailto:shivamshah.sus@gmail.com">Paid PartnerShips</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Character count for textarea
+                document.querySelector('textarea').addEventListener('input', function () {
+                    document.querySelector('.character-count').textContent =
+                        this.value.length + '/1000';
+                });
+            </script>
+</body>
+
+</html>
